@@ -1,0 +1,739 @@
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.06.30"]
+[Round "1.1"]
+[White "Rapport, Richard"]
+[Black "Artemiev, Vladislav"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2735"]
+[BlackElo "2761"]
+[ECO "A15"]
+[Opening "English opening"]
+[WhiteFideId "738590"]
+[BlackFideId "24101605"]
+[EventDate "2019.06.30"]
+
+1. Nf3 Nf6 2. c4 c6 3. d4 d5 4. Qb3 e6 5. Bg5 Nbd7 6. Nc3 Qa5 7. Bd2 Qb6 8. Qc2
+Be7 9. e3 O-O 10. Rc1 Qd8 11. Be2 b6 12. O-O Bb7 13. cxd5 cxd5 14. Bd3 Rc8 15.
+Qb1 a6 16. a4 Bd6 17. Ne2 Ne4 18. Rxc8 Qxc8 19. Rc1 Qb8 20. Be1 h6 21. h3 Rc8
+22. b4 Be7 23. b5 a5 24. Rc2 Bd6 25. Rxc8+ Qxc8 26. Nd2 Nxd2 27. Bxd2 Kf8 28.
+Bc3 Qc7 29. Qa1 Nf6 30. Bb2 Bb4 31. Bc3 Be7 32. Bb2 Bb4 33. Bc3 Be7 34. Bb2 Bb4
+35. Bc3 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.06.30"]
+[Round "1.2"]
+[White "Wang, Hao"]
+[Black "Wei, Yi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2737"]
+[BlackElo "2741"]
+[ECO "E32"]
+[Opening "Nimzo-Indian"]
+[Variation "classical variation"]
+[WhiteFideId "8602883"]
+[BlackFideId "8603405"]
+[EventDate "2019.06.30"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. e4 d5 6. e5 Ne4 7. a3 Bxc3+ 8. bxc3
+c5 9. Bd3 Qa5 10. Ne2 cxd4 11. cxd5 exd5 12. f3 Nxc3 13. Nxd4 Ne4+ 14. Ke2 f5
+15. e6 Nc6 16. Nxc6 bxc6 17. e7 Re8 18. Qxc6 Rxe7 19. Qxa8 Ng3+ 20. Kd1 Qc3 21.
+Bd2 Qxa1+ 22. Bc1 Qc3 23. Bd2 Qa1+ 24. Bc1 Qc3 25. Bd2 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.06.30"]
+[Round "1.3"]
+[White "Yu, Yangyi"]
+[Black "Vidit, Santosh Gujrathi"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2738"]
+[BlackElo "2707"]
+[ECO "C50"]
+[Opening "Giuoco Pianissimo"]
+[WhiteFideId "8603820"]
+[BlackFideId "5029465"]
+[EventDate "2019.06.30"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 Bc5 5. Bg5 Be7 6. a4 O-O 7. Nc3 d6 8. h3
+Be6 9. Bxf6 Bxf6 10. Bxe6 fxe6 11. O-O d5 12. Qe2 Qd7 13. Nb1 a5 14. Nbd2 Rad8
+15. Nb1 Ra8 16. Nbd2 Rad8 17. g3 Be7 18. Kg2 Bd6 19. h4 Qe8 20. c3 h6 21. Rh1
+Qh5 22. Rae1 Bc5 23. Rhf1 Qg6 24. Nh2 Rf6 25. h5 Qh7 26. Ng4 Rf7 27. Nf3 Bd6 28.
+Nh4 Ne7 29. Qd1 d4 30. Qb3 dxc3 31. bxc3 Kh8 32. Qxe6 Qg8 33. Qc4 Qe8 34. Rh1
+Rf8 35. Qe6 Qc6 36. Ng6+ Nxg6 37. hxg6 Bc5 38. Rxh6+ 1-0
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.06.30"]
+[Round "1.4"]
+[White "Amin, Bassem"]
+[Black "Inarkiev, Ernesto"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2693"]
+[ECO "A07"]
+[Opening "Reti"]
+[Variation "King's Indian attack (Barcza system)"]
+[WhiteFideId "10601457"]
+[BlackFideId "4162722"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. g3 Nf6 3. Bg2 g6 4. O-O Bg7 5. d3 O-O 6. Nbd2 c5 7. e4 Nc6 8. Re1
+e5 9. exd5 Nxd5 10. c3 h6 11. Qb3 Nb6 12. Ne4 Be6 13. c4 Nd7 14. Be3 b6 15. Qa4
+Qc7 16. Nc3 Rad8 17. Nb5 Qb7 18. Bd2 a6 19. Nc3 Rc8 20. a3 Rfd8 21. b4 b5 22.
+cxb5 axb5 23. Qxb5 Qxb5 24. Nxb5 cxb4 25. axb4 e4 26. dxe4 Bxa1 27. Rxa1 g5 28.
+Bc3 g4 29. Nh4 Nde5 30. Bf1 Rd7 31. Nf5 Bxf5 32. exf5 Nf3+ 33. Kg2 Ne7 34. Be2
+Nxf5 35. Ra6 Rd5 36. Rb6 h5 37. h3 N5d4 38. Bxd4 Nxd4 39. Nxd4 Rxd4 40. hxg4
+hxg4 41. b5 Rc2 42. Rb8+ Kg7 43. Re8 Rdd2 44. Bxg4 Rxf2+ 45. Kg1 Rg2+ 46. Kf1
+Rh2 47. Kg1 Rcg2+ 48. Kf1 Rb2 49. Kg1 Rhg2+ 50. Kf1 Rxg3 51. Be2 f5 52. Kf2 Rgb3
+53. Ke1 f4 54. Kd1 Re3 0-1
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.01"]
+[Round "2.1"]
+[White "Artemiev, Vladislav"]
+[Black "Inarkiev, Ernesto"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2761"]
+[BlackElo "2693"]
+[ECO "A13"]
+[Opening "English opening"]
+[WhiteFideId "24101605"]
+[BlackFideId "4162722"]
+[EventDate "2019.06.30"]
+
+1. c4 e6 2. b3 d5 3. e3 d4 4. exd4 Nc6 5. Nf3 Nxd4 6. Nxd4 Qxd4 7. Nc3 Ne7 8.
+Bb2 c5 9. Qf3 Qd7 10. O-O-O Nc6 11. Qg3 f6 12. Nb5 e5 13. f4 a6 14. Nc3 exf4 15.
+Qxf4 Bd6 16. Qe3+ Kf7 17. Be2 Nd4 18. Bh5+ g6 19. Rdf1 Nf5 20. Qf3 Be5 21. Bg4
+Rd8 22. Nd5 Qd6 23. Bxf5 Bxf5 24. g4 Bxb2+ 25. Kxb2 Qe5+ 26. Qc3 Qxc3+ 27. Kxc3
+Bxg4 28. Rxf6+ Kg7 29. Rb6 Bf3 30. Rxb7+ Kh6 31. Re1 Bxd5 32. cxd5 Rxd5 33. Ree7
+Rh8 34. Ra7 Rd6 35. a4 Rf6 36. Re3 g5 37. Rc7 g4 38. h3 gxh3 39. Rxh3+ Kg6 40.
+Rg3+ Kh6 41. Rh3+ Kg6 42. Rg3+ Kf5 43. Rxc5+ Kf4 44. Rg1 Rd6 45. Rf1+ Kg4 46.
+Rc7 Kg3 47. Rg7+ Kh2 48. Rf4 Kh3 49. b4 h5 50. d4 Rc8+ 51. Kd3 Rdc6 52. Rf3+ Kh4
+53. Ke4 Rb6 54. Rf4+ Kh3 55. Rf1 Kh2 56. Rf5 h4 57. b5 axb5 58. axb5 Rc3 59.
+Rf2+ Kh3 60. Rf4 Rg3 61. Rh7 Rg4 62. d5 Rxb5 63. Rxg4 Kxg4 64. Rg7+ Kh5 65. d6
+Rb1 66. d7 Rd1 67. Kf5 Kh6 68. Kf6 Rd6+ 69. Ke5 Rd1 70. Rf7 h3 71. Rf6+ Kg7 72.
+Rd6 Rxd6 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.01"]
+[Round "2.2"]
+[White "Vidit, Santosh Gujrathi"]
+[Black "Amin, Bassem"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2707"]
+[ECO "E84"]
+[Opening "King's Indian"]
+[Variation "Saemisch, Panno main line"]
+[WhiteFideId "5029465"]
+[BlackFideId "10601457"]
+[EventDate "2019.06.30"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. f3 O-O 6. Be3 a6 7. Qd2 Nc6 8. Nge2
+Rb8 9. Rc1 Bd7 10. Nd1 Re8 11. Nf2 b5 12. c5 dxc5 13. Rxc5 e5 14. d5 Ne7 15. Rc1
+c6 16. dxc6 Nxc6 17. Nd3 Qe7 18. Nc5 Red8 19. Nxa6 Rb7 20. a3 Be6 21. Qc3 Nd4
+22. Qb4 Rd6 23. Nc5 Nc6 24. Qc3 b4 25. Qc2 Rb8 26. Nxe6 Qxe6 27. Ng3 bxa3 28.
+bxa3 Nd4 29. Qc7 Qb3 30. Rc3 Qb1+ 31. Rc1 Qb3 32. Rc3 Qb1+ 33. Rc1 Qb3 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.01"]
+[Round "2.3"]
+[White "Wei, Yi"]
+[Black "Yu, Yangyi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2741"]
+[BlackElo "2738"]
+[ECO "C42"]
+[Opening "Petrov"]
+[Variation "Nimzovich attack"]
+[WhiteFideId "8603405"]
+[BlackFideId "8603820"]
+[EventDate "2019.06.30"]
+
+1. e4 e5 2. Nf3 Nf6 3. Nxe5 d6 4. Nf3 Nxe4 5. Nc3 Nxc3 6. dxc3 Be7 7. Be3 O-O 8.
+Qd2 Nd7 9. O-O-O Nf6 10. Bd3 Re8 11. h4 d5 12. Bg5 h6 13. Bxf6 Bxf6 14. Qf4 Be6
+15. g4 Qd6 16. Qxd6 cxd6 17. Rdg1 Kf8 18. Nd4 Bd7 19. g5 Bxd4 20. cxd4 h5 21.
+Kd2 g6 22. Re1 Rxe1 23. Rxe1 Re8 24. Rxe8+ Kxe8 25. f4 Bf5 26. Bxf5 gxf5 27. Kc3
+Kd7 28. Kb4 Kc6 29. Ka5 Kc7 30. Kb5 Kd7 31. Ka5 Kc7 32. Kb5 Kd7 33. a3 Kc7 34.
+Ka5 Kc6 35. a4 Kd7 36. Kb4 Kc6 37. Ka5 Kd7 38. Kb5 Kc7 39. b3 Kd7 40. a5 Kc8 41.
+a6 Kc7 42. Ka4 b6 43. Kb5 Kd7 44. c3 Kc7 45. c4 dxc4 46. bxc4 Kd7 47. c5 bxc5
+48. dxc5 d5 49. c6+ Kd6 50. c7 Kxc7 51. Kc5 d4 52. Kxd4 Kd6 53. Kc4 Kc6 54. Kd4
+Kd6 55. Kc4 Kc6 56. Kd4 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.01"]
+[Round "2.4"]
+[White "Rapport, Richard"]
+[Black "Wang, Hao"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2735"]
+[BlackElo "2737"]
+[ECO "A14"]
+[Opening "English"]
+[Variation "Neo-Catalan declined"]
+[WhiteFideId "738590"]
+[BlackFideId "8602883"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. g3 Nf6 3. Bg2 e6 4. O-O Be7 5. c4 O-O 6. d4 dxc4 7. Qc2 a6 8. a4
+Bd7 9. Bg5 Bc6 10. Qxc4 Bd5 11. Qc2 Be4 12. Qc1 h6 13. Bxf6 Bxf6 14. Rd1 a5 15.
+Nbd2 Bxf3 16. Bxf3 c6 17. Nb3 Na6 18. h4 Qb6 19. Qc3 Rfd8 20. e3 Nb4 21. h5 Nd5
+22. Qc4 e5 23. dxe5 Bxe5 24. Bxd5 Rxd5 25. Rxd5 cxd5 26. Qxd5 Bxg3 27. fxg3 Rd8
+28. Qc4 Qxe3+ 29. Kg2 Rd3 30. Qc8+ Kh7 31. Qf5+ Kg8 32. Qc8+ Kh7 33. Qf5+ Kg8
+34. Qc8+ 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.02"]
+[Round "3.1"]
+[White "Wang, Hao"]
+[Black "Artemiev, Vladislav"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2737"]
+[BlackElo "2761"]
+[ECO "D12"]
+[Opening "QGD Slav"]
+[Variation "4.e3 Bf5"]
+[WhiteFideId "8602883"]
+[BlackFideId "24101605"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. d4 Nf6 3. c4 c6 4. e3 Bf5 5. Nc3 e6 6. Nh4 Bg6 7. Be2 Nbd7 8. O-O
+Bd6 9. g3 O-O 10. Nxg6 hxg6 11. b3 Qe7 12. Rb1 a5 13. Bb2 Ba3 14. Ba1 Rfd8 15.
+Bf3 Bb4 16. Bg2 e5 17. cxd5 Bxc3 18. d6 Qxd6 19. Bxc3 e4 20. Qd2 Qd5 21. a4 Nf8
+22. b4 axb4 23. Bxb4 c5 24. Ba5 Rd7 25. Rb5 Qd6 26. Bh3 Ne6 27. Rb6 Qd5 28. Bxe6
+fxe6 29. Rb5 Qc4 30. Rxc5 Qxa4 31. Bc7 Nd5 32. Be5 Rf7 33. Qe2 Raf8 34. Bd6 Rd8
+35. Be5 Rdf8 36. Bd6 Rd8 37. Bf4 Rf5 38. Qg4 b6 39. Rcc1 Nxf4 40. gxf4 Qe8 41.
+Rc7 Rf7 42. Rc2 Rc8 43. Rxc8 Qxc8 44. Qxg6 Qc6 45. Kh1 Rf6 46. Qg5 Rf5 47. Qg6
+b5 48. Rg1 Qd7 49. Rb1 Qc6 50. Ra1 Rf6 51. Qg5 Rf5 52. Qg6 Rf6 53. Qh5 Rf5 54.
+Qd1 b4 55. Rc1 Qa6 56. Qc2 Rb5 57. Qxe4 b3 58. Rc6 Qa8 59. Qxe6+ Kh8 60. Qc8+
+Qxc8 61. Rxc8+ Kh7 62. Rc1 Kg6 63. Kg2 b2 64. Rb1 Kf5 65. Kf3 Rb3 66. Ke2 Ke4
+67. Kd2 Rb8 68. Kc3 Rc8+ 69. Kxb2 Kd3 70. Rc1 Rb8+ 71. Ka3 Rb7 72. d5 Ke2 73. d6
+Rd7 74. Rc6 Kxf2 75. e4 Ke3 76. e5 Kd4 1-0
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.02"]
+[Round "3.2"]
+[White "Yu, Yangyi"]
+[Black "Rapport, Richard"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2738"]
+[BlackElo "2735"]
+[ECO "E32"]
+[Opening "Nimzo-Indian"]
+[Variation "classical variation"]
+[WhiteFideId "8603820"]
+[BlackFideId "738590"]
+[EventDate "2019.06.30"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Qc2 O-O 5. Nf3 c5 6. dxc5 Na6 7. g3 Nxc5 8. Bg2
+Nfe4 9. O-O Bxc3 10. bxc3 b6 11. Ng5 d5 12. Nxe4 dxe4 13. Bxe4 Nxe4 14. Qxe4 Ba6
+15. Ba3 Re8 16. c5 Qd2 17. Rfe1 Qxc3 18. Bb4 Qc4 19. Qxc4 Bxc4 20. cxb6 axb6 21.
+a3 b5 22. f3 f6 23. Kf2 Kf7 24. Red1 Red8 25. Rxd8 Rxd8 26. a4 bxa4 27. Rxa4 Rd7
+28. Bc5 Bd5 29. Ra7 Rxa7 30. Bxa7 Ba8 31. Bc5 Bd5 32. Ba7 Ba8 33. Bc5 Bd5 34.
+Ba7 Ba8 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.02"]
+[Round "3.3"]
+[White "Amin, Bassem"]
+[Black "Wei, Yi"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2741"]
+[ECO "D78"]
+[Opening "Neo-Gruenfeld, 6.O-O c6"]
+[WhiteFideId "10601457"]
+[BlackFideId "8603405"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. g3 g6 3. Bg2 Bg7 4. d4 Nf6 5. O-O O-O 6. c4 c6 7. Qb3 a5 8. Bf4 a4
+9. Qb4 dxc4 10. Qxc4 Qb6 11. Nc3 Be6 12. Qd3 Nd5 13. Bg5 f6 14. Bc1 Rd8 15. e4
+Nb4 16. Qe2 Qa6 17. Qxa6 N8xa6 18. Rd1 Bg4 19. Rd2 Bh6 20. Rd1 Bg7 21. Rd2 c5
+22. d5 c4 23. Ne1 Nc5 24. Rd4 Ncd3 25. Nxd3 Nxd3 26. Rxc4 a3 27. b3 f5 28. h3
+Be2 29. Nxe2 Bxa1 30. exf5 b5 31. Re4 Nxc1 32. Nxc1 Rac8 33. Re1 gxf5 34. Nd3
+Bd4 35. Rxe7 Rc2 36. Nb4 Rxf2 37. Nc6 Bc5 38. Re5 Rxa2+ 39. Kh2 Ra1 40. h4 Ra8
+41. d6 Bxd6 42. Rd5 a2 43. Rxd6 Re1 0-1
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.02"]
+[Round "3.4"]
+[White "Inarkiev, Ernesto"]
+[Black "Vidit, Santosh Gujrathi"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2693"]
+[BlackElo "2707"]
+[ECO "B90"]
+[Opening "Sicilian"]
+[Variation "Najdorf, Byrne (English) attack"]
+[WhiteFideId "4162722"]
+[BlackFideId "5029465"]
+[EventDate "2019.06.30"]
+
+1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Be3 e5 7. Nb3 Be6 8. Qd2
+Nbd7 9. f3 h5 10. O-O-O Be7 11. Bg5 b5 12. h4 Rc8 13. Kb1 O-O 14. a3 Re8 15. Be2
+Qb6 16. Rhg1 Bf8 17. Nc1 Rc7 18. N1a2 Rec8 19. Rc1 Qb7 20. Rgd1 Rc5 21. Be3 R5c7
+22. Bg5 Nh7 23. Be3 Nb6 24. g4 hxg4 25. fxg4 Bxa2+ 26. Nxa2 Nc4 27. Qd3 d5 28.
+g5 dxe4 29. Qb3 a5 30. Bg1 a4 31. Qg3 b4 32. axb4 Nxb2 33. Ba6 Qxa6 34. Kxb2 Qe2
+35. Kb1 Rxc2 36. Qf2 Rb2+ 0-1
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.03"]
+[Round "4.1"]
+[White "Artemiev, Vladislav"]
+[Black "Vidit, Santosh Gujrathi"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2761"]
+[BlackElo "2707"]
+[ECO "A37"]
+[Opening "English"]
+[Variation "symmetrical variation"]
+[WhiteFideId "24101605"]
+[BlackFideId "5029465"]
+[EventDate "2019.06.30"]
+
+1. c4 c5 2. g3 g6 3. Bg2 Bg7 4. Nc3 Nc6 5. Nf3 e6 6. d4 cxd4 7. Nb5 d5 8. cxd5
+exd5 9. O-O Nge7 10. Nbxd4 O-O 11. b3 Nf5 12. Nxc6 bxc6 13. Rb1 Qa5 14. Bb2 Qxa2
+15. Bxg7 Kxg7 16. g4 Ne7 17. Qd4+ f6 18. Qc5 Ng8 19. Qxc6 Bxg4 20. Nd4 Qa5 21.
+h3 Bf5 22. Ra1 Qb6 23. Nxf5+ gxf5 24. Qxd5 Rae8 25. Qxf5 Re5 26. Qf3 Rfe8 27. e3
+a5 28. Rab1 Ne7 29. Rfd1 Ng6 30. Rd4 f5 31. Rd7+ R8e7 32. Rxe7+ Nxe7 33. Qg3+
+Ng6 34. h4 h5 35. Rc1 Qf6 36. Rc7+ Re7 37. Rc6 Re6 38. Rxe6 Qxe6 39. Qc7+ Kh6
+40. Qxa5 Nxh4 41. Qd5 Qe7 42. Bh1 f4 43. Be4 fxe3 44. fxe3 Qg7+ 45. Kf2 Qb2+ 46.
+Ke1 Qc1+ 47. Ke2 Qb2+ 48. Qd2 Qe5 49. Qd4 Qe7 50. Bd3 Ng2 51. Qe4 Qf6 52. Qxg2
+Qb2+ 53. Kf1 Qc1+ 54. Kf2 1-0
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.03"]
+[Round "4.2"]
+[White "Wei, Yi"]
+[Black "Inarkiev, Ernesto"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2741"]
+[BlackElo "2693"]
+[ECO "E21"]
+[Opening "Nimzo-Indian"]
+[Variation "three knights variation"]
+[WhiteFideId "8603405"]
+[BlackFideId "4162722"]
+[EventDate "2019.06.30"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 c5 5. g3 Nc6 6. Bg2 Ne4 7. Bd2 Bxc3 8. bxc3
+O-O 9. O-O d6 10. Be3 Qe7 11. Qd3 Nf6 12. Nd2 e5 13. dxc5 dxc5 14. Bg5 h6 15.
+Bxf6 Qxf6 16. Qe3 Qe7 17. Nb3 Bg4 18. Nxc5 Na5 19. Nd3 Rfe8 20. Bd5 Rac8 21. Qe4
+Be6 22. Rab1 b6 23. Rb4 Bxd5 24. cxd5 Rxc3 25. f4 exf4 26. Rxf4 Nb7 27. Qxe7
+Rxe7 28. Rfe4 Kf8 29. Rec4 Rxc4 30. Rxc4 Rxe2 31. Rc8+ Re8 32. Rc7 Re7 33. Rc8+
+Re8 34. Rc7 Re7 35. Rc8+ 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.03"]
+[Round "4.3"]
+[White "Rapport, Richard"]
+[Black "Amin, Bassem"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2735"]
+[BlackElo "2707"]
+[ECO "D78"]
+[Opening "Neo-Gruenfeld, 6.O-O c6"]
+[WhiteFideId "738590"]
+[BlackFideId "10601457"]
+[EventDate "2019.06.30"]
+
+1. Nf3 Nf6 2. g3 g6 3. Bg2 Bg7 4. d4 O-O 5. O-O d5 6. c4 c6 7. Qb3 a5 8. cxd5 a4
+9. Qd1 cxd5 10. Nc3 Ne4 11. Ng5 Nxc3 12. bxc3 Nc6 13. e4 dxe4 14. Nxe4 Qa5 15.
+Bd2 Rd8 16. Rb1 b6 17. Re1 Bd7 18. h3 Rac8 19. Qe2 Be6 20. Be3 Bd5 21. Rb5 Qa7
+22. Nd6 Rxd6 23. Rxd5 Rxd5 24. Bxd5 e6 25. Bg2 Na5 26. d5 exd5 27. Bxd5 Qd7 28.
+Qg4 Qxg4 29. hxg4 b5 30. Bf4 Bf8 31. g5 Nc4 32. Bb7 Rd8 33. Bc6 Na3 34. Kg2 b4
+35. cxb4 Nc2 36. Rb1 Nxb4 37. Bxa4 Nxa2 38. Rb7 Nc3 39. Bb3 Nd5 40. Bd2 Bg7 41.
+Bxd5 Rxd5 42. Rb8+ Bf8 43. Bb4 Rxg5 44. Bxf8 1-0
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.03"]
+[Round "4.4"]
+[White "Wang, Hao"]
+[Black "Yu, Yangyi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2737"]
+[BlackElo "2738"]
+[ECO "A08"]
+[Opening "Reti"]
+[Variation "King's Indian attack"]
+[WhiteFideId "8602883"]
+[BlackFideId "8603820"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. g3 c5 3. Bg2 Nc6 4. d4 e6 5. O-O Nf6 6. c4 dxc4 7. dxc5 Qxd1 8.
+Rxd1 Bxc5 9. Nbd2 c3 10. bxc3 O-O 11. Nb3 Be7 12. Nfd4 Nxd4 13. cxd4 Nd5 14. Na5
+Bd7 15. Nxb7 Ba4 16. Rf1 Rfc8 17. e4 Nc3 18. Re1 Bc6 19. Nc5 Bb5 20. Bf3 Bxc5
+21. dxc5 Rxc5 22. Be3 Rc4 23. e5 Bc6 24. Bxc6 Rxc6 25. Rac1 Rac8 26. Rc2 a5 27.
+Rec1 Ne2+ 28. Rxe2 Rxc1+ 29. Bxc1 Rxc1+ 30. Kg2 Rc3 31. Re3 Rxe3 32. fxe3 Kf8
+33. Kf3 Ke7 34. Ke4 Kd7 35. Kd4 Kc6 36. Kc4 Kb6 37. g4 g5 38. h3 h6 39. a4 Kc6
+40. Kd4 Kb6 41. Kc4 Kc6 42. Kd4 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.05"]
+[Round "5.1"]
+[White "Yu, Yangyi"]
+[Black "Artemiev, Vladislav"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2738"]
+[BlackElo "2761"]
+[ECO "D15"]
+[Opening "QGD Slav"]
+[Variation "4.Nc3"]
+[WhiteFideId "8603820"]
+[BlackFideId "24101605"]
+[EventDate "2019.06.30"]
+
+1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. Nc3 a6 5. cxd5 cxd5 6. Bg5 Ne4 7. Bh4 Nc6 8. e3
+Nxc3 9. bxc3 g6 10. Be2 Bg7 11. O-O O-O 12. c4 dxc4 13. Bxc4 b5 14. Be2 Bb7 15.
+Rc1 Qd7 16. a4 Na7 17. Ne5 Bxe5 18. dxe5 Rfd8 19. Qxd7 Rxd7 20. axb5 Nxb5 21.
+Rc5 Kf8 22. Rfc1 Rd5 23. Rxd5 Bxd5 24. f3 h6 25. Be1 Be6 26. Rc6 Rc8 27. Rxa6
+Rc1 28. Kf2 Nc3 29. Ra8+ Kg7 30. Ra7 Kf8 31. Bd3 Nd1+ 32. Ke2 Nc3+ 33. Kf2 Nd1+
+34. Ke2 Nc3+ 35. Bxc3 Rxc3 36. Kd2 Rb3 37. Kc2 Rb8 38. Be4 Rb5 39. f4 Bd5 40.
+Bxd5 Rc5+ 41. Kd3 Rxd5+ 42. Ke2 h5 43. h3 e6 44. g4 hxg4 45. hxg4 Rb5 46. Kf3
+Rb1 47. Ra2 Kg7 48. Rg2 Kf8 49. Re2 Kg7 50. e4 g5 51. fxg5 Kg6 52. Rh2 Kxg5 53.
+Rh5+ Kg6 54. Rh8 Rf1+ 55. Kg3 Re1 56. Kf3 Rf1+ 57. Kg3 Re1 58. Kf3 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.05"]
+[Round "5.2"]
+[White "Amin, Bassem"]
+[Black "Wang, Hao"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2737"]
+[ECO "B31"]
+[Opening "Sicilian"]
+[Variation "Nimzovich-Rossolimo attack (with ...g6, without ...d6)"]
+[WhiteFideId "10601457"]
+[BlackFideId "8602883"]
+[EventDate "2019.06.30"]
+
+1. e4 c5 2. Nf3 Nc6 3. Bb5 g6 4. Bxc6 dxc6 5. d3 Bg7 6. h3 Nf6 7. Nc3 Nd7 8. Be3
+e5 9. Qd2 h6 10. Nh2 b6 11. O-O Nf8 12. f4 exf4 13. Bxf4 Ne6 14. Bg3 Qg5 15. Qe1
+Nd4 16. Qf2 O-O 17. Bd6 Bxh3 18. Bf4 Qxg2+ 19. Qxg2 Bxg2 20. Kxg2 Nxc2 21. Rad1
+Rad8 22. Rf2 Nb4 23. Rfd2 f5 24. Bg3 fxe4 25. dxe4 Rxd2+ 26. Rxd2 c4 27. Rd6 Rf6
+28. Rd8+ Rf8 29. Rd6 Rf6 30. Rd8+ Rf8 31. Rxf8+ Bxf8 32. Nf3 Bg7 33. Ne5 Bxe5
+34. Bxe5 Nd3 35. Bb8 Nxb2 36. Bxa7 b5 37. Ne2 b4 38. Kf3 Nd3 39. Ke3 c5 40. Kd2
+Kf7 41. Nc1 Nxc1 42. Kxc1 Ke6 43. Bxc5 Ke5 44. Bxb4 Kxe4 45. Kc2 Kd5 46. Bd2 h5
+47. a4 Kc6 48. Kc3 Kb7 49. Kxc4 h4 50. Bf4 h3 51. Kd5 Ka6 52. Ke5 Ka5 53. Kf6
+Kxa4 54. Kxg6 h2 55. Bxh2 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.05"]
+[Round "5.3"]
+[White "Inarkiev, Ernesto"]
+[Black "Rapport, Richard"]
+[Result "0-1"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2693"]
+[BlackElo "2735"]
+[ECO "E12"]
+[Opening "Queen's Indian"]
+[Variation "Petrosian system"]
+[WhiteFideId "4162722"]
+[BlackFideId "738590"]
+[EventDate "2019.06.30"]
+
+1. d4 Nf6 2. c4 e6 3. Nf3 b6 4. a3 Bb7 5. Nc3 Ne4 6. Nxe4 Bxe4 7. Nd2 Bb7 8. e4
+g6 9. Bd3 Bg7 10. Nf3 O-O 11. O-O d6 12. Bg5 Qd7 13. Qd2 Nc6 14. Bc2 Na5 15. Qe2
+f5 16. Rac1 Rae8 17. Rfe1 fxe4 18. Bxe4 d5 19. Bb1 Nxc4 20. Bd3 e5 21. Bxc4 dxc4
+22. Qxc4+ Bd5 23. Qxc7 Qf5 24. Be3 Rf7 25. Qc3 Bxf3 26. gxf3 Qxf3 27. dxe5 Qg4+
+28. Kh1 Qf3+ 29. Kg1 Rxe5 30. Qd2 Qg4+ 31. Kh1 Qf3+ 32. Kg1 Qg4+ 33. Kh1 h5 34.
+Qd8+ Kh7 35. Qc8 Qf3+ 36. Kg1 Re4 37. Rc2 Rg4+ 38. Kf1 Qg2+ 39. Ke2 Qxh2 40. Qe6
+Rf8 41. Rd1 Qg2 42. Qd7 Re4 43. Kd3 Qf3 44. Rdc1 Rd4+ 45. Qxd4 Bxd4 46. Kxd4
+Rd8+ 47. Kc4 Rc8+ 48. Kd3 Rd8+ 49. Kc4 Rc8+ 50. Kd3 Rxc2 51. Rxc2 g5 52. Kd2 h4
+53. Rc7+ Kg6 54. Rc8 h3 55. Bd4 Qd5 56. Kc3 h2 0-1
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.05"]
+[Round "5.4"]
+[White "Vidit, Santosh Gujrathi"]
+[Black "Wei, Yi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2741"]
+[ECO "D34"]
+[Opening "QGD"]
+[Variation "Tarrasch, Prague variation, 9.Bg5"]
+[WhiteFideId "5029465"]
+[BlackFideId "8603405"]
+[EventDate "2019.06.30"]
+
+1. c4 c5 2. g3 e6 3. Bg2 d5 4. cxd5 exd5 5. d4 Nf6 6. Nf3 Be7 7. O-O O-O 8. Nc3
+Nc6 9. Bg5 c4 10. e3 Be6 11. Ne5 h6 12. Bxf6 Bxf6 13. Nxc6 bxc6 14. b3 cxb3 15.
+axb3 c5 16. Ne2 Bg4 17. h3 Bxe2 18. Qxe2 cxd4 19. exd4 Bxd4 20. Rad1 Qf6 21. Qf3
+Rad8 22. Qxf6 Bxf6 23. Bxd5 Rd7 24. Bc4 Rxd1 25. Rxd1 Rd8 26. Rxd8+ Bxd8 27. Kg2
+Kf8 28. g4 Bb6 29. f4 g5 30. fxg5 hxg5 31. Kg3 Bc7+ 32. Kf3 Bb6 33. Kg3 Bc7+ 34.
+Kf3 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.06"]
+[Round "6.1"]
+[White "Artemiev, Vladislav"]
+[Black "Wei, Yi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2761"]
+[BlackElo "2741"]
+[ECO "A06"]
+[Opening "Reti"]
+[Variation "Nimzovich-Larsen attack"]
+[WhiteFideId "24101605"]
+[BlackFideId "8603405"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. b3 Nf6 3. Bb2 g6 4. c4 e6 5. g3 Bg7 6. Bg2 O-O 7. O-O b6 8. cxd5
+exd5 9. Nc3 Nbd7 10. d4 c6 11. Rc1 Bb7 12. e3 Re8 13. Ne2 Ne4 14. Nf4 Rc8 15.
+Rc2 a5 16. Qc1 b5 17. Nd3 b4 18. Rd1 c5 19. Nxc5 Ndxc5 20. dxc5 Bxb2 21. Qxb2
+Qe7 22. Rdc1 Rxc5 23. Rxc5 Nxc5 24. Ne5 h5 25. Qd4 Nxb3 26. axb3 Qxe5 27. Qxe5
+Rxe5 28. Rc7 Ba6 29. Ra7 Bc4 30. Rxa5 Bxb3 31. Rb5 Bc4 32. Rxb4 Re7 33. Rb8+ Kg7
+34. Rd8 Ra7 35. h4 Ra1+ 36. Kh2 Ra2 37. Kg1 Ra1+ 38. Kh2 Ra2 39. Kg1 Ra1+ 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.06"]
+[Round "6.2"]
+[White "Rapport, Richard"]
+[Black "Vidit, Santosh Gujrathi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2735"]
+[BlackElo "2707"]
+[ECO "A08"]
+[Opening "Reti"]
+[Variation "King's Indian attack"]
+[WhiteFideId "738590"]
+[BlackFideId "5029465"]
+[EventDate "2019.06.30"]
+
+1. Nf3 d5 2. g3 c5 3. Bg2 Nf6 4. O-O g6 5. c4 Bg7 6. Qa4+ Nc6 7. Ne5 Qd6 8. cxd5
+Nxd5 9. Nc4 Qd8 10. Nc3 e6 11. Ne3 O-O 12. Nexd5 exd5 13. Nxd5 Re8 14. Nc3 Nd4
+15. e3 Bd7 16. Qd1 Nc6 17. Ne4 b6 18. d4 cxd4 19. exd4 Bf5 20. Bg5 Qd7 21. Nf6+
+Bxf6 22. Bxf6 Be4 23. f3 Bd5 24. Qd2 Qd6 25. Bg5 Bc4 26. Rf2 f6 27. d5 Ne5 28.
+Bf4 Rad8 29. b3 Bxd5 30. Rd1 Qe7 31. Bxe5 fxe5 32. Qe3 Bb7 33. Rfd2 Rxd2 34.
+Rxd2 Kg7 35. h4 Qf6 36. Rd7+ Re7 37. Rxe7+ Qxe7 38. f4 Bxg2 39. Kxg2 Qb7+ 40.
+Kf2 exf4 41. Qe5+ Kg8 42. Qe8+ Kg7 43. Qe5+ Kg8 44. Qe8+ Kg7 45. Qe5+ 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.06"]
+[Round "6.3"]
+[White "Wang, Hao"]
+[Black "Inarkiev, Ernesto"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2737"]
+[BlackElo "2693"]
+[ECO "C50"]
+[Opening "Giuoco Pianissimo"]
+[WhiteFideId "8602883"]
+[BlackFideId "4162722"]
+[EventDate "2019.06.30"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Nf6 4. d3 Bc5 5. c3 O-O 6. O-O d5 7. exd5 Nxd5 8.
+Nbd2 Nb6 9. Bb5 Bd6 10. a4 a6 11. Bxc6 bxc6 12. a5 Nd5 13. Re1 Re8 14. Nc4 Rf8
+15. Ncd2 Re8 16. Nc4 f6 17. Nfd2 Be6 18. d4 exd4 19. Nxd6 cxd6 20. cxd4 Bf7 21.
+Rxe8+ Qxe8 22. Nc4 Nc3 23. bxc3 Bxc4 24. Bf4 Qe6 25. h4 Re8 26. Qf3 d5 27. Rb1
+Bb5 28. Bd2 h6 29. Re1 Be2 30. Qg3 Kh7 31. Be3 Bb5 32. Bd2 Qf7 33. f3 Rxe1+ 34.
+Qxe1 Qg6 35. Bf4 Qf5 36. Bd6 Qd7 37. Qe7 Qxe7 38. Bxe7 h5 39. Kf2 Kg6 40. Bc5
+Bc4 41. Be7 Bb5 42. Bc5 Bc4 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.06"]
+[Round "6.4"]
+[White "Yu, Yangyi"]
+[Black "Amin, Bassem"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2738"]
+[BlackElo "2707"]
+[ECO "E70"]
+[Opening "King's Indian"]
+[Variation "4.e4"]
+[WhiteFideId "8603820"]
+[BlackFideId "10601457"]
+[EventDate "2019.06.30"]
+
+1. c4 Nf6 2. Nc3 g6 3. d4 Bg7 4. e4 d6 5. Bd3 O-O 6. Nge2 Nc6 7. O-O e5 8. d5
+Nd4 9. Nxd4 exd4 10. Ne2 Re8 11. f3 c5 12. Bg5 a6 13. Qd2 Qc7 14. b3 Nd7 15. f4
+Nf6 16. Bxf6 Bxf6 17. Kh1 b5 18. Ng1 bxc4 19. bxc4 Rb8 20. Rae1 Bh4 21. Re2 Bg4
+22. Nf3 Bf6 23. h3 Bxf3 24. Rxf3 Rb7 25. Qe1 Bg7 26. g4 Qb8 27. g5 Rb2 28. Rff2
+Rb4 29. h4 Qc8 30. f5 Be5 31. Rf3 Qb7 32. Kg2 Rb2 33. Rff2 Qb4 34. Qxb4 Rxb4 35.
+Kh3 Reb8 36. Kg4 Ra4 37. h5 Ra3 38. Rf3 Rc3 39. hxg6 hxg6 40. Ref2 Rc1 41. Rf1
+Rxf1 42. Bxf1 Rb1 43. a3 Re1 44. fxg6 fxg6 45. Bd3 Kg7 46. Rf1 Rxf1 47. Bxf1 Kf7
+48. Kf3 Ke7 49. Bh3 Bh2 50. Bc8 a5 51. a4 Bg1 52. Bh3 Be3 53. Kg4 Bd2 54. Bf1
+Be3 55. Bd3 Kf7 56. Bc2 Bg1 57. Bd3 Bh2 58. Bc2 Be5 59. Bd3 Kg7 60. Bc2 Kf7 61.
+Bd3 Kg7 62. Bc2 Kf7 63. Bd3 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.07"]
+[Round "7.1"]
+[White "Amin, Bassem"]
+[Black "Artemiev, Vladislav"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2761"]
+[ECO "B51"]
+[Opening "Sicilian"]
+[Variation "Canal-Sokolsky (Nimzovich-Rossolimo, Moscow) attack"]
+[WhiteFideId "10601457"]
+[BlackFideId "24101605"]
+[EventDate "2019.06.30"]
+
+1. e4 c5 2. Nf3 d6 3. Bb5+ Nd7 4. O-O a6 5. Bd3 Ngf6 6. Re1 g6 7. c3 Bg7 8. Bc2
+O-O 9. d4 e5 10. a4 Rb8 11. dxe5 Nxe5 12. Nxe5 dxe5 13. Qxd8 Rxd8 14. Be3 b6 15.
+f3 Be6 16. a5 bxa5 17. Bc1 Rb5 18. Ba4 Rb6 19. Bd1 Ne8 20. Rxa5 Nd6 21. Be2 c4
+22. Rd1 Rdb8 23. Ra2 f5 24. exf5 gxf5 25. Na3 f4 26. Nc2 Nf5 27. Ra4 Rc8 28. Ra5
+Kf7 29. Nb4 h5 30. Bd2 Bf6 31. Rda1 h4 32. Be1 Rg8 33. Rxa6 Rxa6 34. Rxa6 h3 35.
+Bf1 hxg2 36. Be2 Ne3 37. Nc6 Rc8 38. Bf2 Bh3 39. Nb4 Kg7 40. Ra7+ Kg6 41. Ra6
+Kf5 42. Rc6 Ra8 43. Ra6 Rb8 44. Ra7 Rd8 45. Be1 Bg5 46. Ra5 Rd6 47. Ra6 Rd7 48.
+b3 Be7 49. bxc4 Kg5 50. Ra5 Kf5 51. c5 Rc7 52. Bd3+ Ke6 53. c6 Bxb4 54. cxb4
+Rxc6 55. Ra6 Rxa6 56. Bxa6 Kd6 57. Bd3 Nd5 58. Bd2 Nc7 59. Bc4 Ne8 60. b5 Kc5
+61. Be2 Nd6 62. Bc3 Nxb5 63. Bxb5 Kxb5 64. Bxe5 Kc4 65. Bxf4 Kd3 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.07"]
+[Round "7.2"]
+[White "Inarkiev, Ernesto"]
+[Black "Yu, Yangyi"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2693"]
+[BlackElo "2738"]
+[ECO "A27"]
+[Opening "English"]
+[Variation "three knights system"]
+[WhiteFideId "4162722"]
+[BlackFideId "8603820"]
+[EventDate "2019.06.30"]
+
+1. c4 e5 2. Nc3 Nc6 3. Nf3 g6 4. d4 exd4 5. Nxd4 Bg7 6. Nxc6 dxc6 7. Qxd8+ Kxd8
+8. Bd2 Be6 9. O-O-O Kc8 10. b3 Nf6 11. h3 a5 12. e3 b6 13. g4 Kb7 14. Bg2 a4 15.
+b4 Nd7 16. b5 Ne5 17. f4 Nd3+ 18. Kc2 Nb4+ 19. Kb1 Bxc4 20. a3 Nd3 21. Bxc6+ Ka7
+22. Nxa4 Nf2 23. Bxa8 Rxa8 24. Bc3 Kb7 25. Bxg7 Rxa4 26. Kb2 Bxb5 27. Rhg1 Nxd1+
+28. Rxd1 Re4 29. Rd5 c5 30. Re5 Rxe5 31. Bxe5 Bf1 32. h4 Be2 33. g5 Kc6 34. Kc3
+Kd5 35. Bc7 b5 36. Bb6 Bf3 37. Ba7 Be4 38. Bb6 Bf5 39. Ba7 c4 40. Bd4 Bd7 41.
+Kd2 Ke4 42. Kc2 Kf3 43. Bb2 Kg4 44. Kc3 Kxh4 45. e4 Kg4 46. Bc1 Kf3 47. e5 Ke4
+48. Bd2 Kd5 49. Bc1 Bg4 50. Bd2 Bf5 51. Bc1 Bg4 52. Bd2 Bf5 53. Bc1 Bg4 1/2-1/2
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.07"]
+[Round "7.3"]
+[White "Vidit, Santosh Gujrathi"]
+[Black "Wang, Hao"]
+[Result "1-0"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2707"]
+[BlackElo "2737"]
+[ECO "E06"]
+[Opening "Catalan"]
+[Variation "closed, 5.Nf3"]
+[WhiteFideId "5029465"]
+[BlackFideId "8602883"]
+[EventDate "2019.06.30"]
+
+1. d4 Nf6 2. c4 e6 3. g3 d5 4. Bg2 Be7 5. Nf3 O-O 6. O-O dxc4 7. Qc2 a6 8. Qxc4
+b5 9. Qc2 Bb7 10. Bd2 Be4 11. Qc1 c6 12. a4 Nbd7 13. Nc3 Bg6 14. Nh4 Bh5 15. h3
+Nd5 16. axb5 axb5 17. Nxd5 cxd5 18. Bf3 Bxf3 19. Nxf3 Qb6 20. Qc2 Rac8 21. Qd3
+Ra8 22. Rxa8 Rxa8 23. Rc1 h6 24. Bf4 g5 25. Ne5 Nxe5 26. Bxe5 b4 27. Qf3 Qd8 28.
+Qh5 Bf8 29. Rc7 Qe8 30. h4 f5 31. Qf3 g4 32. Qe3 Rc8 33. Ra7 Qc6 34. Bf4 Qb6 35.
+Qe5 h5 36. Qf6 Rc1+ 37. Bxc1 Qxa7 38. Qxe6+ Qf7 39. Qc8 Kh7 40. Bf4 Kg6 41. Be5
+Be7 42. Qc6+ Kh7 43. e3 Bf8 44. Bd6 Bxd6 45. Qxd6 b3 46. Qb6 1-0
+
+[Event "10th Danzhou GM 2019"]
+[Site "Danzhou CHN"]
+[Date "2019.07.07"]
+[Round "7.4"]
+[White "Wei, Yi"]
+[Black "Rapport, Richard"]
+[Result "1/2-1/2"]
+[WhiteTitle "GM"]
+[BlackTitle "GM"]
+[WhiteElo "2741"]
+[BlackElo "2735"]
+[ECO "C67"]
+[Opening "Ruy Lopez"]
+[Variation "open Berlin defence, 5...Be7"]
+[WhiteFideId "8603405"]
+[BlackFideId "738590"]
+[EventDate "2019.06.30"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bb5 Nf6 4. O-O Nxe4 5. d4 Be7 6. Qe2 Nd6 7. Bxc6 bxc6 8.
+dxe5 Nb7 9. Nc3 O-O 10. Nd4 Bc5 11. Rd1 Re8 12. Qh5 Qe7 13. Bf4 Bxd4 14. Rxd4 d5
+15. Re1 Nc5 16. Bd2 Qe6 17. b4 Nd7 18. b5 c5 19. Nxd5 cxd4 20. Nxc7 Qe7 21. e6
+Nf6 22. exf7+ Qxf7 23. Qxf7+ Kxf7 24. Nxa8 Nd5 25. Rxe8 Kxe8 26. Ba5 Kd7 27. b6
+Kc6 28. Nc7 Nxb6 29. Bxb6 axb6 30. Ne8 g5 31. Kf1 Bf5 32. Ng7 Bxc2 33. Ne6 Bd3+
+34. Ke1 h6 35. Kd2 Bb1 36. Nxd4+ Kc5 37. Kc3 Bxa2 38. Nf5 h5 39. Ng3 Bd5 40.
+Nxh5 Bxg2 41. Nf6 Kd6 42. Nh7 g4 43. Nf6 Bf3 44. Kb4 Ke6 45. Nxg4 Bxg4 46. f3
+Kf5 47. fxg4+ Kxg4 48. Kb5 Kh3 49. Kxb6 Kxh2 1/2-1/2
+

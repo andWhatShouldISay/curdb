@@ -1,0 +1,23 @@
+<head>
+    <title>Log in baumanec.fwd.wf</title>
+</head>
+
+<body>
+<p>Log in baumanec.fwd.wf</p>
+
+
+
+<form method="POST">
+    <label>Login:</label><br/>
+    <input type="text" name="login"><br/>
+    <label>Password:</label><br/>
+    <input type="password" name="password"><br/>
+    <input type="submit">
+</form>
+
+{{if .Success}}
+{{else}}
+<p><font color="red">Wrong login or password</font> </p>
+{{end}}
+
+</body>

@@ -1,0 +1,461 @@
+<html>
+<head>
+    <title>chess db</title>
+    <link rel="stylesheet" href="css/chessboard-0.3.0.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/pawn-promotion.css"/>
+    <link rel="stylesheet" href="css/splitscreen.css"/>
+
+
+</head>
+<body>
+<div class="split left">
+    <div class="centered">
+        <div id="board" style="width:400px;"></div>
+        <button id="flipOrientationBtn">Flip orientation</button>
+
+        <p>Status: <span id="status"></span></p>
+        <!-- <p>FEN: <span id="fen" style="font-size: small;"></span></p> -->
+        <p>PGN: <span id="pgn"></span><font color="gray"><em><span id="ext_pgn"></span></em></font></p>
+        <p><span id="info"></span></p>
+        <form action="/delete" method="POST" name="delete">
+            <input type="hidden" name="delete" id="deleteid">
+            <input type="submit" id="delete" value="delete game"><br/>
+        </form>
+
+        <a href="#" onclick="if (game.load_pgn(prompt('Import PGN'))){
+                infoEl.html('')
+        move_stack = []
+        ext_pgn = game.pgn();updateBoard(board,false)} else {alert('fail')}"  style="text-align:right">Import PGN</a>
+
+        <form method="POST" style="text-align:right" action="/">
+            <label>White: </label>
+            <input type="text"  name="white" required><br/>
+
+            <label>Black: </label>
+            <input type="text" name="black" required><br/>
+
+            <label>Tournament: </label>
+            <input type="text" name="event"><br/>
+
+            <label>Site: </label>
+            <input type="text" name="site"><br/>
+
+            <label>Round:</label>
+            <input type="text" name="round"><br/>
+
+            <label>Date:</label>
+            <input type="date" name="date" required><br/>
+
+            <label>Result:</label>
+            <select name="result">
+                <option>1-0</option>
+                <option>1/2</option>
+                <option>0-1</option>
+                <option>*</option>
+            </select>
+
+            <input type="hidden" name="pgn" id="form_pgn">
+            <input type="submit" value="save game" ><br/>
+        </form>
+    </div>
+</div>
+
+<div class="split right">
+    {{if .LoggedIn}}
+    <font color="pink">You are logged in as {{.Username}}</font><br>
+    <a href="/logout"><font color="pink">Logout</font></a><br>
+    {{else}}
+    <a href="/register"><font color="pink">Register</font></a><br>
+    <a href="/login"><font color="pink">Log in</font></a><br>
+    {{end}}
+    <a href="/filter"><font color="pink">Filter games</font></a><br>
+    <p><h1><font color="pink">Saved games:</font></h1></p>
+    {{range .Games}}
+        <a href="#" onclick="showGame({{.ID}})">
+
+                <font color="pink">{{.White}} vs {{.Black}}, {{.Result}} {{.Date}} {{.Event}} {{.Round}}</font>
+
+            <br>
+        </a>
+    {{end}}
+    <font color="pink" id="pages">Pages:</font><br>
+
+
+
+
+</div>
+
+<div id="promotion-dialog">
+    <ol id="promote-to">
+        <li class="ui-state-default"><span class="piece-name">q</span><img class="promotion-piece-q promotion-piece"/>
+        </li>
+        <li class="ui-state-default"><span class="piece-name">r</span><img class="promotion-piece-r promotion-piece"/>
+        </li>
+        <li class="ui-state-default"><span class="piece-name">n</span><img class="promotion-piece-n promotion-piece"/>
+        </li>
+        <li class="ui-state-default"><span class="piece-name">b</span><img class="promotion-piece-b promotion-piece"/>
+        </li>
+    </ol>
+</div>
+<p>
+
+    <script src="js/jquery-3.4.0.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/chessboard-0.3.0.js"></script>
+    <script src="js/chess.js"></script>
+    <script src="js/json3.js"></script>
+
+    <script>
+        function href(x){
+            s=window.location.href
+            s=s.replace(/#/,"")
+            if (s.match(/page=[0-9]*/)===null){
+                if (s.indexOf("?")===-1){
+                    s+="?page=0"
+                } else {
+                    s+="&page=0"
+                }
+            }
+            return "<a href="+s.replace(/page=[0-9]*/,"page="+x)+"><font color=\"pink\">"+x+"</font></a>"
+        }
+
+        for (i=0;i<{{.Pages}};i++)
+            document.getElementById("pages").innerHTML+=href(i)+" "
+        var fen, piece_theme, promote_to, promoting, promotion_dialog, gameID;
+
+        var removeGreySquares = function () {
+            $('#board .square-55d63').css('background', '');
+        };
+
+        var greySquare = function (square) {
+            var squareEl = $('#board .square-' + square);
+
+            var background = '#a9a9a9';
+            if (squareEl.hasClass('black-3c85d') === true) {
+                background = '#696969';
+            }
+
+            squareEl.css('background', background);
+        };
+
+
+        var statusEl = $('#status'),
+            fenEl = $('#fen'),
+            pgnEl = $('#pgn'),
+            infoEl = $('#info'),
+            ext_pgnEl = $('#ext_pgn');
+
+        var ext_pgn = ""
+
+        var move_stack = []
+
+        piece_theme = 'img/chesspieces/wikipedia/{piece}.png';
+        promotion_dialog = $('#promotion-dialog');
+        var game = new Chess();
+        promoting = false;
+        // do not pick up pieces if the game is over
+        // only pick up pieces for the side to move
+        var onDragStart = function (source, piece, position, orientation) {
+            if (game.game_over() === true ||
+                (game.turn() === 'w' && piece.search(/^b/) !== -1) ||
+                (game.turn() === 'b' && piece.search(/^w/) !== -1)) {
+                return false;
+            }
+        };
+        var onDrop = function (source, target) {
+            move_cfg = {
+                from: source,
+                to: target,
+                promotion: 'q'
+            };
+            // check we are not trying to make an illegal pawn move to the 8th or 1st rank,
+            // so the promotion dialog doesn't pop up unnecessarily
+            // e.g. (p)d7-f8
+            var move = game.move(move_cfg);
+            // illegal move
+            if (move === null) {
+                return 'snapback';
+            } else {
+                infoEl.html("")
+                $('#delete').css('display','none')
+                move_stack = []
+                ext_pgn = game.pgn()
+                game.undo(); //move is ok, now we can go ahead and check for promotion
+            }
+            // is it a promotion?
+            var source_rank = source.substring(2, 1);
+            var target_rank = target.substring(2, 1);
+            var piece = game.get(source).type;
+            if (piece === 'p' &&
+                ((source_rank === '7' && target_rank === '8') || (source_rank === '2' && target_rank === '1'))) {
+                promoting = true;
+                // get piece images
+                $('.promotion-piece-q').attr('src', getImgSrc('q'));
+                $('.promotion-piece-r').attr('src', getImgSrc('r'));
+                $('.promotion-piece-n').attr('src', getImgSrc('n'));
+                $('.promotion-piece-b').attr('src', getImgSrc('b'));
+                //show the select piece to promote to dialog
+                promotion_dialog.dialog({
+                    modal: true,
+                    height: 46,
+                    width: 184,
+                    resizable: true,
+                    draggable: false,
+                    close: onDialogClose,
+                    closeOnEscape: false,
+                    dialogClass: 'noTitleStuff'
+                }).dialog('widget').position({
+                    of: $('#board'),
+                    my: 'middle middle',
+                    at: 'middle middle',
+                });
+                //the actual move is made after the piece to promote to
+                //has been selected, in the stop event of the promotion piece selectable
+                return;
+            }
+            // no promotion, go ahead and move
+            makeMove(game, move_cfg);
+        }
+        var onSnapEnd = function () {
+            if (promoting) return; //if promoting we need to select the piece first
+            updateBoard(board);
+        };
+
+        function getImgSrc(piece) {
+            return piece_theme.replace('{piece}', game.turn() + piece.toLocaleUpperCase());
+        }
+
+
+        function updateBoard(board, flag) {
+            if (flag !== undefined && flag === false)
+                board.position(game.fen(), false);
+            else
+                board.position(game.fen());
+            promoting = false;
+            var status = '';
+
+            var moveColor = 'White';
+            if (game.turn() === 'b') {
+                moveColor = 'Black';
+            }
+
+            // checkmate?
+            if (game.in_checkmate() === true) {
+                status = 'Game over, ' + moveColor + ' is in checkmate.';
+            }
+
+            // draw?
+            else if (game.in_draw() === true) {
+                status = 'Game over, drawn position';
+            }
+
+            // game still on
+            else {
+                status = moveColor + ' to move';
+
+                // check?
+                if (game.in_check() === true) {
+                    status += ', ' + moveColor + ' is in check';
+                }
+            }
+
+            statusEl.html(status);
+            fenEl.html(game.fen());
+            pgnEl.html(game.pgn());
+            ext_pgnEl.html(ext_pgn.substr(game.pgn().length))
+
+            document.getElementById("form_pgn").value = game.pgn()
+
+        }
+
+        var onDialogClose = function () {
+            // console.log(promote_to);
+            move_cfg.promotion = promote_to;
+            makeMove(game, move_cfg);
+        }
+
+        function makeMove(game, cfg) {
+            // see if the move is legal
+            var move = game.move(cfg);
+            // illegal move
+            if (move === null) return 'snapback';
+        }
+
+        var onMouseoverSquare = function (square, piece) {
+            // get list of possible moves for this square
+            var moves = game.moves({
+                square: square,
+                verbose: true
+            });
+
+            // exit if there are no moves available for this square
+            if (moves.length === 0) return;
+
+            // highlight the square they moused over
+            greySquare(square);
+
+            // highlight the possible squares for this piece
+            for (var i = 0; i < moves.length; i++) {
+                greySquare(moves[i].to);
+            }
+        };
+
+        var onMouseoutSquare = function (square, piece) {
+            removeGreySquares();
+        };
+
+        // init chessboard
+        var cfg = {
+            draggable: true,
+            onDragStart: onDragStart,
+            onDrop: onDrop,
+            onSnapEnd: onSnapEnd,
+            pieceTheme: piece_theme,
+            onMouseoutSquare: onMouseoutSquare,
+            onMouseoverSquare: onMouseoverSquare,
+            position: 'start'
+        };
+        var board = ChessBoard("board", cfg);
+        $('#flipOrientationBtn').on('click', board.flip)
+        // init promotion piece dialog
+        $("#promote-to").selectable({
+            stop: function () {
+                $(".ui-selected", this).each(function () {
+                    var selectable = $('#promote-to li');
+                    var index = selectable.index(this);
+                    if (index > -1) {
+                        var promote_to_html = selectable[index].innerHTML;
+                        var span = $('<div>' + promote_to_html + '</div>').find('span');
+                        promote_to = span[0].innerHTML;
+                    }
+                    promotion_dialog.dialog('close');
+                    $('.ui-selectee').removeClass('ui-selected');
+                    updateBoard(board);
+                });
+            }
+        });
+
+
+        document.addEventListener("keydown", keyDownTextField, false);
+
+        function keyDownTextField(e) {
+            var keyCode = e.keyCode;
+            if (keyCode === 37) {
+                undo()
+            }
+
+            if (keyCode === 38) {
+                toBegin()
+            }
+
+            if (keyCode === 39) {
+                unundo()
+            }
+
+            if (keyCode === 40) {
+                toEnd()
+            }
+        }
+
+        function toBegin() {
+            while (game.fen() !== Chess().fen()) {
+                move_stack.push(game.undo())
+            }
+            updateBoard(board, false)
+        }
+
+        function toEnd() {
+            while (move_stack.length > 0)
+                game.move(move_stack.pop())
+            updateBoard(board, false)
+        }
+
+        function undo() {
+            move = game.undo()
+            if (move !== null)
+                move_stack.push(move)
+            updateBoard(board)
+        }
+
+
+        function unundo() {
+            if (move_stack.length > 0)
+                game.move(move_stack.pop())
+            updateBoard(board)
+        }
+
+
+        function equalFENs(s,t) {
+            var i = s.length-1
+            while (s[i]!=' ')--i;--i;
+            while (s[i]!=' ')--i;
+            j = t.length-1
+            while (t[j]!=' ')--j;--j;
+            while (t[j]!=' ')--j;
+            return s.substr(0,i)===t.substr(0,j)
+        }
+
+        function showGame(id) {
+            username = {{.Username}}
+            {{range .Games}}
+            if ({{.ID}}==id) {
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('POST', '/getGame',true);
+
+// 3. Отсылаем запрос
+
+                xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+                    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                        FENs = xhr.responseText.split('X')
+                        FENs.pop()
+
+                        game = new Chess()
+                        game.load(FENs[0])
+
+
+
+                        for (m=1;m<FENs.length;m++){
+                            moves = game.moves()
+                            for (var i = 0; i < moves.length; i++) {
+                                game.move(moves[i])
+
+                                if (equalFENs(FENs[m], game.fen())) {
+                                    break
+                                } else {
+                                    game.undo()
+                                }
+                            }
+                        }
+                        ext_pgn = game.pgn()
+
+                        updateBoard(board,false)
+                        $('#info').html('{{.White}} vs {{.Black}}, {{.Result}} <br> {{.Date}} {{.Event}} {{.Site}} Round {{.Round}}')
+                        if (username === '{{.User}}' || username === "admin") {
+                            $('#delete').css("display", "block")
+                            document.getElementById("deleteid").value = id
+                        }
+                        else
+                            $('#delete').css("display","none")
+
+                    }
+                }
+
+                formData = new FormData()
+
+
+                formData.append('ID',id)
+
+                xhr.send(formData);
+            }
+            {{end}}
+        }
+        $('#delete').css("display","none")
+
+
+        updateBoard(board)
+    </script>
+
+</body>
+</html>

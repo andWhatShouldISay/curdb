@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter games</title>
+    <link rel="stylesheet" href="css/chessboard-0.3.0.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <link rel="stylesheet" href="css/pawn-promotion.css"/>
+    <link rel="stylesheet" href="css/splitscreen.css"/>
+
+</head>
+<body>
+
+<div class="split left">
+    <div class="centered">
+        <div id="board" style="width:400px;"></div>
+        <button id="flipOrientationBtn">Flip orientation</button>
+        <button id="startBtn">Start Position</button>
+        <button id="clearBtn">Clear Board</button>
+
+    </div>
+</div>
+
+<div class="split right">
+    <form method="GET" style="text-align:right">
+        <font color="pink"> <label>Result:</label></font>
+
+        <select name="result">
+            <option></option>
+            <option>1-0</option>
+            <option>1/2</option>
+            <option>0-1</option>
+        </select><br/>
+
+        <font color="pink"> <label>Date from:</label></font>
+        <input type="date" name="dateF"><br/>
+
+        <font color="pink"> <label>Date to:</label></font>
+        <input type="date" name="dateT"><br/>
+
+        <!--<font color="pink"><label>White: </label></font>
+        <input type="text"  name="white" id="white" oninput=""><br/>-->
+
+        <font color="pink"><label for="white-choice">White:</label></font>
+        <input list="white-flavors" id="white-choice" name="white-choice" oninput="
+            s=this.value
+            document.getElementById('white-flavors').innerHTML='';
+            if (s.length>=3){
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/getPlayer',true);
+                formData = new FormData()
+
+
+                xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+
+                    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                        a=xhr.responseText.split('\n')
+                        for (i=0;i<a.length;i++){
+                            var option = document.createElement('option');
+                            option.value = a[i];
+                            document.getElementById('white-flavors').appendChild(option);
+                        }
+                    }
+                }
+
+                formData.append('str',s)
+
+                xhr.send(formData);
+
+            }
+        ">
+        <datalist id="white-flavors">
+        </datalist><br/>
+
+
+        <font color="pink"><label for="black-choice">Black:</label></font>
+        <input list="black-flavors" id="black-choice" name="black-choice" oninput="
+            s=this.value
+            document.getElementById('black-flavors').innerHTML='';
+            if (s.length>=3){
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/getPlayer',true);
+                formData = new FormData()
+
+
+                xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+
+                    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                        a=xhr.responseText.split('\n')
+                        for (i=0;i<a.length;i++){
+                            var option = document.createElement('option');
+                            option.value = a[i];
+                            document.getElementById('black-flavors').appendChild(option);
+                        }
+                    }
+                }
+
+                formData.append('str',s)
+
+                xhr.send(formData);
+
+            }
+        ">
+        <datalist id="black-flavors">
+        </datalist><br/>
+
+
+
+        <font color="pink"><label for="event-choice">Tournament:</label></font>
+        <input list="event-flavors" id="event-choice" name="event-choice" oninput="
+            s=this.value
+            document.getElementById('event-flavors').innerHTML='';
+            if (s.length>=3){
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', '/getEvent',true);
+                formData = new FormData()
+
+
+                xhr.onreadystatechange = function() {//Вызывает функцию при смене состояния.
+
+                    if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
+                        a=xhr.responseText.split('\n')
+                        for (i=0;i<a.length;i++){
+                            var option = document.createElement('option');
+                            option.value = a[i];
+                            document.getElementById('event-flavors').appendChild(option);
+                        }
+                    }
+                }
+
+                formData.append('str',s)
+
+                xhr.send(formData);
+
+            }
+        ">
+        <datalist id="event-flavors">
+        </datalist><br/>
+
+        <font color="pink"><label>Round:</label></font>
+        <input type="text" name="round"><br/>
+
+        <input type="hidden" name="fen" id="form_fen">
+
+
+
+        <input type="submit" value="Filter" ><br/>
+    </form>
+</div>
+
+<script src="js/jquery-3.4.0.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/chessboard-0.3.0.js"></script>
+<script src="js/chess.js"></script>
+<script src="js/json3.js"></script>
+<script>
+    function onDrop (source, target, piece, newPos, oldPos, orientation) {
+        document.getElementById("form_fen").value=ChessBoard.objToFen(newPos)
+    }
+    document.getElementById("form_fen").value="8/8/8/8/8/8/8/8"
+
+    var board = ChessBoard('board', {
+        draggable: true,
+        dropOffBoard: 'trash',
+        onDrop: onDrop,
+        sparePieces: true
+    })
+
+    $('#flipOrientationBtn').on('click', board.flip)
+    $('#startBtn').on('click', board.start)
+    $('#startBtn').on('click', function () {
+        document.getElementById("form_fen").value="rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR"
+    })
+    $('#clearBtn').on('click', board.clear)
+    $('#clearBtn').on('click', function () {
+        document.getElementById("form_fen").value="8/8/8/8/8/8/8/8"
+    })
+</script>
+
+</body>
+</html>
