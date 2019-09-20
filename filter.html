@@ -17,7 +17,10 @@
         <button id="flipOrientationBtn">Flip orientation</button>
         <button id="startBtn">Start Position</button>
         <button id="clearBtn">Clear Board</button>
-
+        <form method="GET">
+            <input type="hidden" name="fen" id="form_fen">
+            <input type="submit" value="Filter by position" ><br/>
+        </form>
     </div>
 </div>
 
@@ -140,7 +143,6 @@
         <font color="pink"><label>Round:</label></font>
         <input type="text" name="round"><br/>
 
-        <input type="hidden" name="fen" id="form_fen">
 
 
 

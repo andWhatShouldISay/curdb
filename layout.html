@@ -23,6 +23,7 @@
             <input type="submit" id="delete" value="delete game"><br/>
         </form>
 
+        {{if .Allow}}
         <a href="#" onclick="if (game.load_pgn(prompt('Import PGN'))){
                 infoEl.html('')
         move_stack = []
@@ -58,6 +59,7 @@
             <input type="hidden" name="pgn" id="form_pgn">
             <input type="submit" value="save game" ><br/>
         </form>
+        {{end}}
     </div>
 </div>
 
@@ -79,6 +81,7 @@
             <br>
         </a>
     {{end}}
+	<br>
     <font color="pink" id="pages">Pages:</font><br>
 
 
@@ -265,7 +268,9 @@
             pgnEl.html(game.pgn());
             ext_pgnEl.html(ext_pgn.substr(game.pgn().length))
 
+            {{if .Allow}}
             document.getElementById("form_pgn").value = game.pgn()
+            {{end}}
 
         }
 

@@ -176,6 +176,7 @@ func addGame(game pgn.Game, white string, black string, eventname string, site s
 		tx.Rollback()
 		return err
 	}
+	cash = make(map[string]([]int64))
 
 	b := pgn.NewBoard()
 	parseFEN(b.String(), g.ID, tx)

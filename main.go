@@ -53,21 +53,52 @@ func getString(s string) string {
 
 }
 
-func Intersection(a, b []int64) (c []int64) {
+/*
+var popular = []Piece{
+	Piece{Type: "q", Coord: "d1", Colour: "w"},
+	Piece{Type: "q", Coord: "d8", Colour: "b"},
+	Piece{Type: "k", Coord: "e1", Colour: "w"},
+	Piece{Type: "k", Coord: "e8", Colour: "b"},
+	Piece{Type: "k", Coord: "g1", Colour: "w"},
+	Piece{Type: "k", Coord: "g8", Colour: "b"},
+	Piece{Type: "r", Coord: "a1", Colour: "w"},
+	Piece{Type: "r", Coord: "a8", Colour: "b"},
+	Piece{Type: "r", Coord: "f8", Colour: "b"},
+	Piece{Type: "r", Coord: "h1", Colour: "w"},
+	Piece{Type: "r", Coord: "h8", Colour: "b"},
+	Piece{Type: "n", Coord: "f3", Colour: "w"},
+	Piece{Type: "n", Coord: "f6", Colour: "b"},
+	Piece{Type: "b", Coord: "c1", Colour: "w"},
+	Piece{Type: "b", Coord: "c8", Colour: "b"},
+	Piece{Type: "p", Coord: "a2", Colour: "w"},
+	Piece{Type: "p", Coord: "a7", Colour: "b"},
+	Piece{Type: "p", Coord: "b2", Colour: "w"},
+	Piece{Type: "p", Coord: "b7", Colour: "b"},
+	Piece{Type: "p", Coord: "c2", Colour: "w"},
+	Piece{Type: "p", Coord: "c7", Colour: "b"},
+	Piece{Type: "p", Coord: "d4", Colour: "w"},
+	Piece{Type: "p", Coord: "e4", Colour: "w"},
+	Piece{Type: "p", Coord: "e6", Colour: "b"},
+	Piece{Type: "p", Coord: "f2", Colour: "w"},
+	Piece{Type: "p", Coord: "f7", Colour: "b"},
+	Piece{Type: "p", Coord: "g2", Colour: "w"},
+	Piece{Type: "p", Coord: "g3", Colour: "w"},
+	Piece{Type: "p", Coord: "g6", Colour: "b"},
+	Piece{Type: "p", Coord: "g7", Colour: "b"},
+	Piece{Type: "p", Coord: "h2", Colour: "w"},
+	Piece{Type: "p", Coord: "h3", Colour: "w"},
+	Piece{Type: "p", Coord: "h6", Colour: "b"},
+	Piece{Type: "p", Coord: "h7", Colour: "b"},
+}
 
-	m := make(map[int64]bool)
-
-	for _, item := range a {
-		m[item] = true
-	}
-
-	for _, item := range b {
-		if _, ok := m[item]; ok {
-			c = append(c, item)
+func Popular(p Piece) bool {
+	for _, q := range popular {
+		if p == q {
+			return true
 		}
 	}
-	return
-}
+	return false
+}*/
 
 func main() {
 
@@ -80,155 +111,13 @@ func main() {
 	defer db.Close()
 	//	initDB(db)
 
+	cash = make(map[string]([]int64))
+
 	http.HandleFunc("/register", register)
 	http.HandleFunc("/login", login)
 	http.HandleFunc("/logout", logout)
 
-	http.HandleFunc("/filter", func(w http.ResponseWriter, r *http.Request) {
-		log.Println(r.URL.String())
-		if r.URL.String() == "/filter" {
-			tmpl := template.Must(template.ParseFiles("filter.html"))
-			err := tmpl.Execute(w, nil)
-			if err != nil {
-				fmt.Println(err.Error())
-			}
-		} else {
-			query := db
-			fen := r.FormValue("fen")
-			i := 0
-			if len(fen) > 0 {
-
-				fen = strings.Replace(fen, "/", " ", -1)
-				var s [8]string
-				fmt.Sscanf(fen, "%s %s %s %s %s %s %s %s", &s[0], &s[1], &s[2], &s[3], &s[4], &s[5], &s[6], &s[7])
-				var posIDs []int64
-				fl := true
-				for c := '8'; c >= '1'; c-- {
-					col := 97
-					for x := 0; x < len(s[i]); x++ {
-						if isDigit(s[i][x]) {
-							v, _ := strconv.ParseInt(string(s[i][x]), 10, 32)
-							col += int(v)
-						} else {
-							t := getPiece(s[i][x]).Type
-							coord := string(col) + string(c)
-							var pieces []Piece
-							var ids []int64
-							db.Where("coord = ? AND type = ?", coord, t).Find(&pieces).Pluck("position_id", &ids)
-							if fl {
-								fl = false
-								posIDs = ids
-							} else {
-								posIDs = Intersection(posIDs, ids)
-							}
-							col++
-						}
-					}
-					i++
-				}
-				log.Println(posIDs)
-				var gamesIDs []int64
-				db.Model(&Position{}).Where(posIDs).Pluck("game_id", &gamesIDs)
-				log.Println(gamesIDs)
-				query = query.Where(gamesIDs)
-			}
-			result := r.FormValue("result")
-			if result == "1/2" {
-				result = "1/2-1/2"
-			}
-			white := r.FormValue("white-choice")
-			black := r.FormValue("black-choice")
-			event := r.FormValue("event-choice")
-			year := int64(0)
-			if len(event) > 5 {
-				var err error
-				year, err = strconv.ParseInt(event[len(event)-4:], 10, 32)
-				event = event[:len(event)-5]
-				if err != nil {
-					http.Error(w, "Bad query", 404)
-					return
-				}
-			} else if len(event) > 0 {
-				http.Error(w, "Bad query", 404)
-				return
-			}
-			date1 := r.FormValue("dateF")
-			date2 := r.FormValue("dateT")
-			round := r.FormValue("round")
-
-			if len(white) > 0 {
-				var P Player
-				db.Where("name = ?", white).First(&P)
-				if P.ID == 0 {
-					http.Error(w, "Bad query", 404)
-					return
-				} else {
-					query = query.Where("white_id = ?", P.ID)
-				}
-			}
-			if len(black) > 0 {
-				var P Player
-				db.Where("name = ?", black).First(&P)
-				if P.ID == 0 {
-					http.Error(w, "Bad query", 404)
-					return
-				} else {
-					query = query.Where("black_id = ?", P.ID)
-				}
-			}
-			if len(result) > 0 {
-				query = query.Where("result = ?", result)
-			}
-			if len(date1) > 0 {
-				query = query.Where("date >= ?", date1)
-			}
-			if len(date2) > 0 {
-				query = query.Where("date <= ?", date2)
-			}
-			if len(event) > 0 && year > 0 {
-				var E Event
-				db.Where("name = ? and year = ?", event, year).First(&E)
-				if E.ID == 0 {
-					http.Error(w, "Bad query = query", 404)
-					return
-				} else {
-					query = query.Where("event_id = ?", E.ID)
-				}
-				if len(round) > 0 {
-					query = query.Where("round = ?", round)
-				}
-			}
-			session, _ := store.Get(r, "chessdb")
-			tmpl := template.Must(template.ParseFiles("layout.html"))
-
-			auth, ok := session.Values["authenticated"].(bool)
-			username := ""
-
-			if auth && ok {
-				username, _ = session.Values["username"].(string)
-			}
-			pg := r.FormValue("page")
-			if pg == "" {
-				pg = "0"
-			}
-			p, err := strconv.ParseInt(pg, 10, 32)
-			if err != nil {
-				p = 0
-			}
-
-			gms, sz := getAllGames(int(p*10), int(p*10+10), query)
-
-			err = tmpl.Execute(w, struct {
-				LoggedIn bool
-				Username string
-				Games    []GameInfo
-				Pages    int
-			}{auth, username, gms, sz})
-			if err != nil {
-				fmt.Println(err.Error())
-			}
-		}
-	})
+	http.HandleFunc("/filter", filter)
 
 	http.HandleFunc("/delete", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method == "POST" {
@@ -239,7 +128,11 @@ func main() {
 			log.Println("delete game id = ", id)
 
 			db.Where("id = ?", id).Delete(Game{})
+			var posIDs []int64
+			db.Where("game_id = ?", id).Find(&posIDs)
 			db.Where("game_id = ?", id).Delete(Position{})
+			db.Where("position_id in (?)", posIDs).Delete(Piece{})
+			cash = make(map[string]([]int64))
 			http.Redirect(w, r, "/", http.StatusSeeOther)
 		}
 	})
@@ -367,7 +260,8 @@ func main() {
 			Username string
 			Games    []GameInfo
 			Pages    int
-		}{auth, username, gms, sz})
+			Allow    bool
+		}{auth, username, gms, sz, username == "admin"})
 		if err != nil {
 			fmt.Println(err.Error())
 		}
@@ -377,8 +271,8 @@ func main() {
 	http.Handle("/img/", http.StripPrefix("/img/", http.FileServer(http.Dir("img"))))
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
-	fmt.Println(":9000")
-	err = http.ListenAndServe(":9000", nil)
+	fmt.Println(":7000")
+	err = http.ListenAndServe(":7000", nil)
 	if err != nil {
 		fmt.Println(err)
 	}
