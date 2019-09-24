@@ -38,13 +38,13 @@ type Group struct {
 
 type Game struct {
 	gorm.Model
-	Date      time.Time `gorm:"type:date"`
-	Round     string    `gorm:"type:text"`
-	Result    string    `gorm:"type:char(7);default:'*'"`
-	UserID    uint      `gorm:"not null"`
-	WhiteID   uint
-	BlackID   uint
-	EventID   uint
+	Date      time.Time  `gorm:"type:date"`
+	EventID   uint       `gorm:"not null"`
+	Round     string     `gorm:"type:text"`
+	Result    string     `gorm:"type:char(7);default:'*'"`
+	UserID    uint       `gorm:"not null"`
+	WhiteID   uint       `gorm:"not null"`
+	BlackID   uint       `gorm:"not null"`
 	Positions []Position `gorm:"foreignkey:GameID"`
 }
 

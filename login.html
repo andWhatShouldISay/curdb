@@ -1,18 +1,19 @@
 <head>
-    <title>Log in baumanec.fwd.wf</title>
+    <title>Log in localhost:7000</title>
 </head>
 
 <body>
-<p>Log in baumanec.fwd.wf</p>
+<p>Log in localhost:7000</p>
 
 
 
 <form method="POST">
+    {{ .CsrfField }}
     <label>Login:</label><br/>
     <input type="text" name="login"><br/>
     <label>Password:</label><br/>
     <input type="password" name="password"><br/>
-    <input type="submit">
+    <input type="submit" value="Log in">
 </form>
 
 {{if .Success}}

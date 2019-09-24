@@ -8,6 +8,8 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/gorilla/csrf"
+
 	"github.com/jinzhu/gorm"
 )
 
@@ -338,12 +340,13 @@ func filter(w http.ResponseWriter, r *http.Request) {
 		gms, sz := getAllGames(int(p*10), int(p*10+10), query)
 
 		err = tmpl.Execute(w, struct {
-			LoggedIn bool
-			Username string
-			Games    []GameInfo
-			Pages    int
-			Allow    bool
-		}{auth, username, gms, sz, username == "admin"})
+			LoggedIn  bool
+			Username  string
+			Games     []GameInfo
+			Pages     int
+			Allow     bool
+			CsrfField template.HTML
+		}{auth, username, gms, sz, username == "admin", csrf.TemplateField(r)})
 		if err != nil {
 			fmt.Println(err.Error())
 		}

@@ -19,6 +19,7 @@
         <p>PGN: <span id="pgn"></span><font color="gray"><em><span id="ext_pgn"></span></em></font></p>
         <p><span id="info"></span></p>
         <form action="/delete" method="POST" name="delete">
+            {{ .CsrfField }}
             <input type="hidden" name="delete" id="deleteid">
             <input type="submit" id="delete" value="delete game"><br/>
         </form>
@@ -30,6 +31,7 @@
         ext_pgn = game.pgn();updateBoard(board,false)} else {alert('fail')}"  style="text-align:right">Import PGN</a>
 
         <form method="POST" style="text-align:right" action="/">
+            {{ .CsrfField }}
             <label>White: </label>
             <input type="text"  name="white" required><br/>
 
@@ -72,6 +74,7 @@
     <a href="/login"><font color="pink">Log in</font></a><br>
     {{end}}
     <a href="/filter"><font color="pink">Filter games</font></a><br>
+    <a href="/"><font color="pink">Main page</font></a><br>
     <p><h1><font color="pink">Saved games:</font></h1></p>
     {{range .Games}}
         <a href="#" onclick="showGame({{.ID}})">

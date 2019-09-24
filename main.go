@@ -10,6 +10,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/gorilla/csrf"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"
 )
@@ -53,53 +54,6 @@ func getString(s string) string {
 
 }
 
-/*
-var popular = []Piece{
-	Piece{Type: "q", Coord: "d1", Colour: "w"},
-	Piece{Type: "q", Coord: "d8", Colour: "b"},
-	Piece{Type: "k", Coord: "e1", Colour: "w"},
-	Piece{Type: "k", Coord: "e8", Colour: "b"},
-	Piece{Type: "k", Coord: "g1", Colour: "w"},
-	Piece{Type: "k", Coord: "g8", Colour: "b"},
-	Piece{Type: "r", Coord: "a1", Colour: "w"},
-	Piece{Type: "r", Coord: "a8", Colour: "b"},
-	Piece{Type: "r", Coord: "f8", Colour: "b"},
-	Piece{Type: "r", Coord: "h1", Colour: "w"},
-	Piece{Type: "r", Coord: "h8", Colour: "b"},
-	Piece{Type: "n", Coord: "f3", Colour: "w"},
-	Piece{Type: "n", Coord: "f6", Colour: "b"},
-	Piece{Type: "b", Coord: "c1", Colour: "w"},
-	Piece{Type: "b", Coord: "c8", Colour: "b"},
-	Piece{Type: "p", Coord: "a2", Colour: "w"},
-	Piece{Type: "p", Coord: "a7", Colour: "b"},
-	Piece{Type: "p", Coord: "b2", Colour: "w"},
-	Piece{Type: "p", Coord: "b7", Colour: "b"},
-	Piece{Type: "p", Coord: "c2", Colour: "w"},
-	Piece{Type: "p", Coord: "c7", Colour: "b"},
-	Piece{Type: "p", Coord: "d4", Colour: "w"},
-	Piece{Type: "p", Coord: "e4", Colour: "w"},
-	Piece{Type: "p", Coord: "e6", Colour: "b"},
-	Piece{Type: "p", Coord: "f2", Colour: "w"},
-	Piece{Type: "p", Coord: "f7", Colour: "b"},
-	Piece{Type: "p", Coord: "g2", Colour: "w"},
-	Piece{Type: "p", Coord: "g3", Colour: "w"},
-	Piece{Type: "p", Coord: "g6", Colour: "b"},
-	Piece{Type: "p", Coord: "g7", Colour: "b"},
-	Piece{Type: "p", Coord: "h2", Colour: "w"},
-	Piece{Type: "p", Coord: "h3", Colour: "w"},
-	Piece{Type: "p", Coord: "h6", Colour: "b"},
-	Piece{Type: "p", Coord: "h7", Colour: "b"},
-}
-
-func Popular(p Piece) bool {
-	for _, q := range popular {
-		if p == q {
-			return true
-		}
-	}
-	return false
-}*/
-
 func main() {
 
 	var err error
@@ -109,7 +63,8 @@ func main() {
 		return
 	}
 	defer db.Close()
-	//	initDB(db)
+	//
+	initDB(db)
 
 	cash = make(map[string]([]int64))
 
@@ -256,12 +211,13 @@ func main() {
 		gms, sz := getAllGames(int(p*10), int(p*10+10), db)
 
 		err = tmpl.Execute(w, struct {
-			LoggedIn bool
-			Username string
-			Games    []GameInfo
-			Pages    int
-			Allow    bool
-		}{auth, username, gms, sz, username == "admin"})
+			LoggedIn  bool
+			Username  string
+			Games     []GameInfo
+			Pages     int
+			Allow     bool
+			CsrfField template.HTML
+		}{auth, username, gms, sz, username == "admin", csrf.TemplateField(r)})
 		if err != nil {
 			fmt.Println(err.Error())
 		}
@@ -272,7 +228,7 @@ func main() {
 	http.Handle("/css/", http.StripPrefix("/css/", http.FileServer(http.Dir("css"))))
 
 	fmt.Println(":7000")
-	err = http.ListenAndServe(":7000", nil)
+	err = http.ListenAndServe(":7000", csrf.Protect([]byte("0123456789ABCDEF"), csrf.Secure(false))(http.DefaultServeMux))
 	if err != nil {
 		fmt.Println(err)
 	}

@@ -8,6 +8,8 @@ import (
 	"log"
 	"net/http"
 
+	"github.com/gorilla/csrf"
+
 	"github.com/gorilla/sessions"
 )
 
@@ -23,7 +25,6 @@ func login(w http.ResponseWriter, r *http.Request) {
 
 		userLogin := r.FormValue("login")
 
-
 		passwordBytes := md5.Sum([]byte(r.FormValue("password")))
 		password := hex.EncodeToString(passwordBytes[:])
 
@@ -31,18 +32,24 @@ func login(w http.ResponseWriter, r *http.Request) {
 
 		var user User
 
-		db.Where("login = ?", userLogin).Find(&user)
+		db.Where("login = ?",
+			userLogin).Find(&user)
 
-
-		if user.ID==0 {
+		if user.ID == 0 {
 			log.Println("no user")
-			template.Must(template.ParseFiles("login.html")).Execute(w, struct{ Success bool }{false})
+			template.Must(template.ParseFiles("login.html")).Execute(w, struct {
+				Success   bool
+				CsrfField template.HTML
+			}{false, csrf.TemplateField(r)})
 			return
 		}
 
 		if user.Password != password {
 			log.Println("wrong password")
-			template.Must(template.ParseFiles("login.html")).Execute(w, struct{ Success bool }{false})
+			template.Must(template.ParseFiles("login.html")).Execute(w, struct {
+				Success   bool
+				CsrfField template.HTML
+			}{false, csrf.TemplateField(r)})
 			return
 		}
 		log.Println("successful login")
@@ -55,7 +62,10 @@ func login(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/", http.StatusSeeOther)
 
 	} else {
-		template.Must(template.ParseFiles("login.html")).Execute(w, struct{ Success bool }{true})
+		template.Must(template.ParseFiles("login.html")).Execute(w, struct {
+			Success   bool
+			CsrfField template.HTML
+		}{true, csrf.TemplateField(r)})
 	}
 }
 
@@ -72,9 +82,16 @@ func logout(w http.ResponseWriter, r *http.Request) {
 func register(w http.ResponseWriter, r *http.Request) {
 	if r.Method == "POST" {
 		userLogin := r.FormValue("login")
+		if len(userLogin) == 0 {
+			log.Println("username can't be empty")
+			template.Must(template.ParseFiles("register.html")).Execute(w, map[string]interface{}{
+				"Success":        false,
+				csrf.TemplateTag: csrf.TemplateField(r),
+			})
+			return
+		}
 		passwordBytes := md5.Sum([]byte(r.FormValue("password")))
 		password := hex.EncodeToString(passwordBytes[:])
-
 
 		log.Println("register", userLogin, password)
 
@@ -82,20 +99,26 @@ func register(w http.ResponseWriter, r *http.Request) {
 
 		db.Where("login = ?", userLogin).Find(&user)
 
-		if user.ID!=0 {
+		if user.ID != 0 {
 			log.Println("user already exist")
-			template.Must(template.ParseFiles("register.html")).Execute(w, struct{ Success bool }{false})
+			template.Must(template.ParseFiles("register.html")).Execute(w, map[string]interface{}{
+				"Success":        false,
+				csrf.TemplateTag: csrf.TemplateField(r),
+			})
 			return
 		} else {
 			log.Println("succesfully registered")
-			db.Create(&User{Login:userLogin,Password:password,Moderator:false})
+			db.Create(&User{Login: userLogin, Password: password, Moderator: false})
 		}
-
-
-
 
 		login(w, r)
 	} else {
-		template.Must(template.ParseFiles("register.html")).Execute(w, struct{ Success bool }{true})
+		err := template.Must(template.ParseFiles("register.html")).Execute(w, map[string]interface{}{
+			"Success":        true,
+			csrf.TemplateTag: csrf.TemplateField(r),
+		})
+		if err != nil {
+			log.Println(err.Error())
+		}
 	}
 }
