@@ -217,7 +217,7 @@ func main() {
 			Pages     int
 			Allow     bool
 			CsrfField template.HTML
-		}{auth, username, gms, sz, username == "admin", csrf.TemplateField(r)})
+		}{auth, username, gms, sz, userByName(username).Moderator, csrf.TemplateField(r)})
 		if err != nil {
 			fmt.Println(err.Error())
 		}

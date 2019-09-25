@@ -20,6 +20,11 @@ func playerByID(ID uint) Player {
 	db.First(&p, ID)
 	return p
 }
+func userByName(name string) User {
+	var u User
+	db.Where("login = ?", name).Find(&u)
+	return u
+}
 
 func userByID(ID uint) User {
 	var u User
@@ -346,7 +351,7 @@ func filter(w http.ResponseWriter, r *http.Request) {
 			Pages     int
 			Allow     bool
 			CsrfField template.HTML
-		}{auth, username, gms, sz, username == "admin", csrf.TemplateField(r)})
+		}{auth, username, gms, sz, userByName(username).Moderator, csrf.TemplateField(r)})
 		if err != nil {
 			fmt.Println(err.Error())
 		}
